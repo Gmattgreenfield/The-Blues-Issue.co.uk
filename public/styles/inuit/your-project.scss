@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    YOUR-PROJECT.CSS
+\*------------------------------------*/
+/**
+ * 
+ * sass --watch your-project.scss:your-project.min.css --style compressed
+ * 
+ * Here we set up some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+$use-beautons: false;
+$use-grids: true;
+
+@import "defaults";
+@import "inuit.css/inuit";
+
+
+
+
+@font-face {
+	font-family: Old Press;
+	src: url(/assets/fonts/Old-Press.ttf);
+}
+
+$old-press: 'Old Press' Impact, sans-serif;
+
+
+$red: #b90039;
+$blue: #263791;
+
+@mixin rounded-corners {
+	border-radius: 4px;
+}
+
+
+
+
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+body {
+	background-color: black;
+ 	background: url("/assets/imgs/background.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+ }
+
+.wrapper {
+	max-width: 1100px;
+	margin: auto;
+	padding: 20px;
+}
+
+.container, footer {
+	padding: 20px;
+	margin-top: 30px;
+ 	background-color: white;
+ 	background: rgba(255, 255, 255, 0.8); 
+ 	@include rounded-corners;
+}
+
+ .container {
+ 	min-height: 400px;
+ }
+
+ .index-contain {
+ 	margin-top: 200px;
+ 	img {
+ 		margin: auto;
+ 	}
+ 	h2 {
+ 		color: white;
+ 	}
+ }
+
+ footer {
+ 	a {
+
+ 	}
+ }
+
+
+/*TEXT*/
+
+a {
+	color: $blue;
+	text-decoration: none;
+	&:hover {
+		color: lighten($blue, 30%);
+	}
+}
+
+h1, h2, h3 {
+	font-family: $old-press;
+}
+
+.centered {
+	text-align: center;
+}
+
+.blue {	color: $blue;  }
+.red { color: $red; }
+
+
+
+
+
+.logo {
+	img {
+		width: 190px;
+	}
+/*	font-family: $old-press;
+	text-align: center;
+	float: left;
+	h1 {
+		font-size: 7em;
+		line-height: .6;
+	}
+	h5 {
+		font-size: 3em;
+		display: inline;
+		align: top;
+	}*/
+}
+
+
+
+.open-nav {
+		display: none;
+}	
+
+ .top-nav {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	text-align: center;
+ 	font-family: $old-press;
+ 	font-size: 2em;
+ 	.current {
+ 		background-color: $red;
+ 	}
+ }
+
+@media (max-width: 800px){
+   .top-nav {
+ 	width: 100%;
+	}
+	.logo {
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.open-nav {
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-color: white;
+		height: 40px;
+		text-align: center;
+	}
+
+
+	.top-nav ul {
+		display: none;
+	}
+	.top-nav li {
+		display: none;
+		background-color: gray;
+		border: 1px solid black;
+		width: 100%;
+		padding: 5px 0;
+		a {
+			display: block;
+		}
+	}
+
+}
