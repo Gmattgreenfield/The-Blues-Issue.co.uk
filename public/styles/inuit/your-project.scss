@@ -82,7 +82,7 @@ body {
 	padding: 20px;
 	margin-top: 30px;
  	background-color: white;
- 	background: rgba(255, 255, 255, 0.8); 
+ 	background: rgba(255, 255, 255, 0.9); 
  	@include rounded-corners;
 }
 
@@ -90,19 +90,29 @@ body {
  	min-height: 400px;
  }
 
- .index-contain {
- 	margin-top: 200px;
- 	img {
- 		margin: auto;
- 	}
- 	h2 {
- 		color: white;
- 	}
+ .index-logo {
+ 	display: block;
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	margin-top: -180px;
+ 	margin-left: -145px;
+ }
+
+ .enter-site {
+ 	position: absolute;
+ 	width: 100%;
+	text-align: center;
+ 	bottom: 80px;
  }
 
  footer {
- 	a {
-
+ 	.footer__social {
+ 		list-style: none;
+ 		float: right;
+ 		li {
+ 			display: inline-block;
+ 		}
  	}
  }
 
@@ -136,18 +146,6 @@ h1, h2, h3 {
 	img {
 		width: 190px;
 	}
-/*	font-family: $old-press;
-	text-align: center;
-	float: left;
-	h1 {
-		font-size: 7em;
-		line-height: .6;
-	}
-	h5 {
-		font-size: 3em;
-		display: inline;
-		align: top;
-	}*/
 }
 
 
@@ -166,6 +164,9 @@ h1, h2, h3 {
  	.current {
  		background-color: $red;
  	}
+ 	.index-link {
+		display: none;
+	}
  }
 
 @media (max-width: 800px){
@@ -178,29 +179,24 @@ h1, h2, h3 {
 }
 
 @media screen and (max-width: 600px) {
-	.open-nav {
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		background-color: white;
-		height: 40px;
-		text-align: center;
-	}
-
-
-	.top-nav ul {
-		display: none;
-	}
-	.top-nav li {
-		display: none;
-		background-color: gray;
-		border: 1px solid black;
-		width: 100%;
-		padding: 5px 0;
+	.index-link {
+		display: block!important;
 		a {
+			color: white;
+			font-size: 1.2em;
+		}
+	}
+	.top-nav {
+		position: relative;
+		ul {
+			width: 100%;
+		}
+		li {
 			display: block;
 		}
 	}
 
+	.logo {
+		display: none;
+	}
 }

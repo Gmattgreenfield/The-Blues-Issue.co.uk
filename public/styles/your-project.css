@@ -2802,18 +2802,31 @@ body {
   padding: 20px;
   margin-top: 30px;
   background-color: white;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 4px; }
 
 .container {
   min-height: 400px; }
 
-.index-contain {
-  margin-top: 200px; }
-  .index-contain img {
-    margin: auto; }
-  .index-contain h2 {
-    color: white; }
+.index-logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -145px; }
+
+.enter-site {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 80px; }
+
+footer .footer__social {
+  list-style: none;
+  float: right; }
+  footer .footer__social li {
+    display: inline-block; }
 
 /*TEXT*/
 a {
@@ -2834,21 +2847,8 @@ h1, h2, h3 {
 .red {
   color: #b90039; }
 
-.logo {
-  /*	font-family: $old-press;
-  	text-align: center;
-  	float: left;
-  	h1 {
-  		font-size: 7em;
-  		line-height: .6;
-  	}
-  	h5 {
-  		font-size: 3em;
-  		display: inline;
-  		align: top;
-  	}*/ }
-  .logo img {
-    width: 190px; }
+.logo img {
+  width: 190px; }
 
 .open-nav {
   display: none; }
@@ -2862,6 +2862,8 @@ h1, h2, h3 {
   font-size: 2em; }
   .top-nav .current {
     background-color: #b90039; }
+  .top-nav .index-link {
+    display: none; }
 
 @media (max-width: 800px) {
   .top-nav {
@@ -2870,23 +2872,18 @@ h1, h2, h3 {
   .logo {
     margin-top: 50px; } }
 @media screen and (max-width: 600px) {
-  .open-nav {
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    height: 40px;
-    text-align: center; }
+  .index-link {
+    display: block !important; }
+    .index-link a {
+      color: white;
+      font-size: 1.2em; }
 
-  .top-nav ul {
-    display: none; }
+  .top-nav {
+    position: relative; }
+    .top-nav ul {
+      width: 100%; }
+    .top-nav li {
+      display: block; }
 
-  .top-nav li {
-    display: none;
-    background-color: gray;
-    border: 1px solid black;
-    width: 100%;
-    padding: 5px 0; }
-    .top-nav li a {
-      display: block; } }
+  .logo {
+    display: none; } }
