@@ -1,19 +1,6 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>The Blues Issue - {% block title %}{% endblock %}</title>
-        {{ "your-project.css" | asset_url | stylesheet_tag }}
-        <!-- TODO: Complete this project :) -->
-    </head>
-    <body class="wrapper">
-        {% include "navigation" %}
+{% include "header" %}
 
-            <div class="index-contain">
-                
-                {% block content %}{% endblock %}
-            </div>
-
-
+    <body>
+            {% block content %}{% endblock %}
     </body>
 </html>
