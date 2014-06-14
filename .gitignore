@@ -20,7 +20,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
+# Sass
+.sass-cache
+.sass-cache/
+.scssc
 
 
 google109a39367d9299a0.html
