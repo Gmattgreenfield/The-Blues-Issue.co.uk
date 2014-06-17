@@ -6,10 +6,17 @@
        	 url('/assets/fonts/old-press.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
-
+// ============== //
+// Inuit Settings //
+// ============== //
+$use-beautons: false;
+$use-grids: true;
 // Import Inuit
 @import "../../../../inuit/inuit.css/inuit";
 
+// =================== //
+// My Default Settings //
+// =================== //
 //These are required for the _my-mixins in inuit folder. not used on this site, should be removed or re-thought.
 $primary-color: red;
 $secondary-color: blue;
@@ -143,6 +150,7 @@ h1, h2, h3 {
    .top-nav {
 	 	float: none;
 	 	margin: auto;
+	 	height: auto;
 	}
 	.logo {
 		margin-top: 50px;
