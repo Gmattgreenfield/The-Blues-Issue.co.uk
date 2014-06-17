@@ -1,108 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: Old Press;
-  src: url("/assets/fonts/old-Press.woff") format("woff"), url("/assets/fonts/old-Press.ttf") format("truetype"); }
-/**
- * Inuit Setup
- */
-/*------------------------------------*\
-    $DEFAULTS
-\*------------------------------------*/
-/**
- * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
- * in the inuit.css-web-template) to override them.
- */
-/*------------------------------------*\
-    $DEBUG
-\*------------------------------------*/
-/**
- * Debug mode will visually highlight any potential markup/accessibility quirks
- * in the browser. Set to `true` or `false`.
- */
-/*------------------------------------*\
-    $BORDER-BOX
-\*------------------------------------*/
-/**
- * Do you want all elements to adopt `box-sizing:border-box;` as per
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
-/**
- * Base stuff
- */
-/**
- * Base font-family.
- */
-/**
- * Default colour for objects’ borders etc.
- */
-/*------------------------------------*\
-    $RESPONSIVE
-\*------------------------------------*/
-/**
- * Responsiveness?
- */
-/**
- * Responsiveness for widescreen/high resolution desktop monitors and beyond?
- * Note: `$responsive` variable above must be set to true before enabling this.
- */
-/**
- * Responsive push and pull produce a LOT of code, only turn them on if you
- * definitely need them.
- */
-/**
- * Note: `$push` variable above must be set to true before enabling these.
- */
-/**
- * Note: `$pull` variable above must be set to true before enabling these.
- */
-/**
- * Tell inuit.css when breakpoints start.
- */
-/*------------------------------------*\
-    $FONT-SIZES
-\*------------------------------------*/
-/**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
- */
-/*------------------------------------*\
-    $QUOTES
-\*------------------------------------*/
-/**
- * English quote marks?
- */
-/**
- * If you want English quotes then please do not edit these; they’re only here
- * because Sass needs them.
- */
-/**
- * If you need non-English quotes, please alter the following values accordingly:
- */
-/*------------------------------------*\
-    $BRAND
-\*------------------------------------*/
-/**
- * Brand stuff
- */
-/**
- * How big would you like round corners to be by default?
- */
-/*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
-\*------------------------------------*/
-/**
- * Which objects and abstractions would you like to use?
- */
-/*------------------------------------*\
-    $FRAMEWORK
-\*------------------------------------*/
-/**
- * inuit.css will work these next ones out for use within the framework.
- *
- * Assign our `$base-line-height` to a new spacing var for more transparency.
- */
+  src: url("/assets/fonts/old-press.woff") format("woff"), url("/assets/fonts/old-press.ttf") format("truetype"); }
 /*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
@@ -1611,62 +1510,6 @@ label,
  * Objects and abstractions
  */
 /*------------------------------------*\
-    $GRIDS
-\*------------------------------------*/
-/**
- * Fluid and nestable grid system, e.g.:
- *
-   <div class="grid">
-
-       <div class="grid__item  one-third">
-           <p>One third grid</p>
-       </div><!--
-
-    --><div class="grid__item  two-thirds">
-           <p>Two thirds grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-half">
-           <p>One half grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div>
-
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
-/**
- * Grid wrapper
- */
-.grid {
-  margin-left: -24px;
-  list-style: none;
-  margin-bottom: 0; }
-
-/**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
- */
-.grid > .grid {
-  margin-left: 0; }
-
-/**
- * Grid
- */
-.grid__item {
-  display: inline-block;
-  width: 100%;
-  padding-left: 24px;
-  vertical-align: top; }
-
-/*------------------------------------*\
     $NAV
 \*------------------------------------*/
 /**
@@ -1779,6 +1622,199 @@ label,
   content: "\002C" "\00A0"; }
 .nav--keywords > li:last-child:after {
   display: none; }
+
+/*------------------------------------*\
+    $BEAUTONS.CSS
+\*------------------------------------*/
+/**
+ * beautons is a beautifully simple button toolkit.
+ *
+ * LICENSE
+ * 
+ * Copyright 2013 Harry Roberts
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ */
+/*!*
+ * 
+ * @csswizardry -- csswizardry.com/beautons
+ * 
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 3;
+  /* [7] */
+  padding-right: 1em;
+  /* [7] */
+  padding-left: 1em;
+  /* [7] */
+  border-radius: 4px;
+  /* [8] */ }
+
+.btn, .btn:hover {
+  text-decoration: none;
+  /* [9] */ }
+.btn:active, .btn:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 2; }
+
+.btn--large {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 4; }
+
+.btn--huge {
+  padding-right: 2em;
+  padding-left: 2em;
+  line-height: 5; }
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full {
+  width: 100%;
+  padding-right: 0;
+  /* [1] */
+  padding-left: 0;
+  /* [1] */
+  text-align: center; }
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+.btn--alpha {
+  font-size: 3rem; }
+
+.btn--beta {
+  font-size: 2rem; }
+
+.btn--gamma {
+  font-size: 1rem; }
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Button function modifiers.
+ */
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+.btn--positive {
+  background-color: #4A993E;
+  color: #fff; }
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+.btn--negative {
+  background-color: #b33630;
+  color: #fff; }
+
+/**
+ * Inactive, disabled buttons.
+ * 
+ * 1. Make the button look like normal text when hovered.
+ */
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus {
+  background-color: #ddd;
+  color: #777;
+  cursor: text;
+  /* [1] */ }
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+/**
+ * Button style modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+.btn--soft {
+  border-radius: 200px;
+  /* [1] */ }
+
+.btn--hard {
+  border-radius: 0; }
 
 /**
  * Style trumps; helper and brand classes
@@ -2760,21 +2796,32 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
+.page-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px; }
+  @media only screen and (min-width: 481px) {
+    .page-container {
+      padding: 24px; } }
+
+.nav--main {
+  background-color: red;
+  color: white; }
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
   overflow: hidden; }
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 body {
   background-color: black;
@@ -2783,19 +2830,19 @@ body {
   background-size: cover;
   background-attachment: fixed; }
 
-.wrapper {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px; }
-
-.container, footer {
+.content,
+footer {
   padding: 20px;
   margin-top: 30px;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
 
-.container {
+.content {
   min-height: 400px; }
 
 .index-logo {
@@ -2843,16 +2890,15 @@ h1, h2, h3 {
 .logo img {
   width: 190px; }
 
-.open-nav {
-  display: none; }
-
 .top-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-  font-family: "Old Press", Impact, sans-serif;
-  font-size: 2em; }
+  float: right;
+  max-width: 510px;
+  height: 50px; }
+  .top-nav li {
+    text-align: center;
+    font-family: "Old Press", Impact, sans-serif;
+    font-size: 2em;
+    padding: 0px 10px; }
   .top-nav .current {
     background-color: #b90039; }
   .top-nav .index-link {
@@ -2860,7 +2906,8 @@ h1, h2, h3 {
 
 @media (max-width: 800px) {
   .top-nav {
-    width: 100%; }
+    float: none;
+    margin: auto; }
 
   .logo {
     margin-top: 50px; } }

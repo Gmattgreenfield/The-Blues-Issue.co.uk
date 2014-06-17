@@ -1,15 +1,9 @@
 
-<div class="open-nav">
-	<input type="checkbox" id="button" />
-	<label for="button" onclick>Menu</label>
-</div>
-
-
-<ul class="top-nav nav  nav--block">
-	<li class="index-link"><a href="/">The Blues Issue</a></li><!--
-	--><li {% if mixture.url == "about" %}class="current"{% endif %}><a href="/about">About</a></li><!--
-	--><li {% if mixture.url == "the-band" %}class="current"{% endif %}><a href="/the-band">The Band</a></li><!--
-	--><li {% if mixture.url == "media" %}class="current"{% endif %}><a href="/media">Watch, Listen</a></li><!--
-	--><li {% if mixture.url == "gigs" %}class="current"{% endif %}><a href="/gigs">On Tour</a></li><!--
-	--><li {% if mixture.url == "contact" %}class="current"{% endif %}><a href="/contact">Fan Mail</a></li>
+<ul class="nav top-nav">
+	<li class="index-link"><a href="/">The Blues Issue</a></li>
+	<li {% if mixture.url == "about" %}class="current"{% endif %}><a href="/about">About</a></li>
+	<li {% if mixture.url == "the-band" %}class="current"{% endif %}><a href="/the-band">The Band</a></li>
+	<li {% if mixture.url == "media" %}class="current"{% endif %}><a href="/media">Watch, Listen</a></li>
+	<li {% if mixture.url == "gigs" %}class="current"{% endif %}><a href="/gigs">On Tour</a></li>
+	<li {% if mixture.url == "contact" %}class="current"{% endif %}><a href="/contact">Fan Mail</a></li>
 </ul>

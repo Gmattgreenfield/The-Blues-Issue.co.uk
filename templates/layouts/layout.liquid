@@ -1,14 +1,17 @@
 {% include "header" %}
-{% include "logo" %}
-{% include "navigation" %}
+ 	<body>
 
- 	<body class="wrapper">
-        
-        <div class="container">
-            {% block content %}{% endblock %}
+        <div class="page-container">
+			{% include "navigation" %}
+			<div class="cf"></div>
+			{% include "logo" %}
+	        
+	        <div class="content">
+		        {% block content %}{% endblock %}
+	        </div>
+
+			{% include "footer" %}
         </div>
-
-		{% include "footer" %}
 		
     </body>
 </html>
