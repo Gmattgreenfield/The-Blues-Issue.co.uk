@@ -16,16 +16,14 @@ $use-nav:true;
 // Import Inuit
 @import "inuit.css/inuit";
 
-
-// ================== //
-// Blues Issue Styles //
-// ================== //
-
 //Variables
 $old-press: 'Old Press', Impact, sans-serif;
 $red: #b90039;
 $blue: #263791;
 
+// Import Pages
+@import "pages/index";
+@import "pages/the-band";
 
 * {
 	margin: 0;
@@ -154,23 +152,3 @@ h1, h2, h3 {
 		margin: 0px 5px;
 	}
 }
-
-
-
-
-// Index Page
- .index-logo {
- 	display: block;
- 	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	margin-top: -180px;
- 	margin-left: -145px;
- }
-
- .enter-site {
- 	position: absolute;
- 	width: 100%;
-	text-align: center;
- 	bottom: 80px;
- }
