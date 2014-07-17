@@ -1,1 +1,36 @@
 // GIGS
+.gigs__month {
+  h3 {
+    font-size: 50px;
+  }
+
+  .grid__item {
+    @include media-query(lap) {
+      width: 33%;
+    }
+    @include media-query(desk) {
+      width: 25%;
+    }
+  }
+}
+
+
+.gigs__gig {
+  background-color: #6f717c;
+  padding: $half-spacing-unit;
+  margin-bottom: $half-spacing-unit;
+}
+
+.gigs__venue {
+  margin: 0;
+}
+
+.gigs__town {
+  margin: 0;
+}
+
+.gigs__date {
+  font-size: 50px;
+  line-height: .8;
+  color: $blue;
+}

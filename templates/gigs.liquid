@@ -4,21 +4,69 @@
 {% block content %}
 
 <h1>Gigs</h1>
+<p>Seeing The Blues Issue live really is the best way to see them! Heres a list of all their upcomming gigs. Click on each one for more info or use the contact page if you want to know even more.</p>
 
 <div class="grid">
 
-  <div class="grid__item one-whole lap-two-quarters desk-three-quarters">
- 		<p>Seeing The Blues Issue live really is the best way to see them! Heres a list of all their upcomming gigs. Click on each one for more info or use the contact page if you want to know even more.</p>
+  <div class="grid__item desk-three-quarters">
+      <!-- Output a list for each month in the database that has enteries -->
+      <div class="gigs__month">
 
+        <h3>month-name</h3>
+
+        <ul class="grid">
+          <!-- Output a list item <li> for each gig in that month -->
+          <li class="grid__item">
+            <div class="gigs__gig">
+              <h4 class="gigs__venue">The Brunswick</h4>
+              <h5 class="gigs__town">Hove</h5>
+              <h5 class="gigs__date">12th</h5>
+            </div>
+          </li><!--
+
+      --><li class="grid__item">
+            <div class="gigs__gig">
+              <h4 class="gigs__venue">The Ranelagh</h4>
+              <h5 class="gigs__town">Brighton</h5>
+              <h5 class="gigs__date">13th</h5>
+            </div>
+          </li><!--
+
+      --><li class="grid__item">
+            <div class="gigs__gig">
+              <h4 class="gigs__venue">The Brunswick</h4>
+              <h5 class="gigs__town">Hove</h5>
+              <h5 class="gigs__date">17th</h5>
+            </div>
+          </li><!--
+
+      --><li class="grid__item">
+            <div class="gigs__gig">
+              <h4 class="gigs__venue">The Ranelagh</h4>
+              <h5 class="gigs__town">Brighton</h5>
+              <h5 class="gigs__date">21st</h5>
+            </div>
+          </li><!--
+
+      --><li class="grid__item">
+            <div class="gigs__gig">
+              <h4 class="gigs__venue">The Wheatsheaf</h4>
+              <h5 class="gigs__town">Worthing</h5>
+              <h5 class="gigs__date">30th</h5>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div><!--
+
+ --><div class="grid__item desk-one-quarter">
    		<h2>Blues Jam</h2>
    		<p>We run the blues jam, second sunday of every month at the Ranelagh, Brighton.</p>
 
    		<h2>Acoustic</h2>
    		<p>If it says acoustic, thats a stripped down Blues Issue, a change of instruments and tweaks to the classic songs.</p>
-    </div><!--
-
- --><div class="grid__item one-quarter">
-    	<iframe id="bp-iframe-0" src="https://www.bandpage.com/extension/tour?bid=149439468703612928&amp;dest=www.bandpage.com%2Fextension&amp;dest_id=eba4079b-6116-4c14-bd0f-1f752171019a&amp;width=250&amp;height=562&amp;opacity=0&amp;layout=&amp;theme=light&amp;font=&amp;includetitle=true&amp;extensiontype=tour&amp;bandbid=149439468703612928&amp;extbid=274579472324276224&amp;cid=rm-transport-0#http://www.thebluesissue.co.uk" frameborder="0" style="width: 250px; height: 562px; border: none;"></iframe>
     </div>
 
 </div>

@@ -2709,6 +2709,31 @@ label,
       .band__photo img {
         margin-top: 48px; } }
 
+.gigs__month h3 {
+  font-size: 50px; }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .gigs__month .grid__item {
+    width: 33%; } }
+@media only screen and (min-width: 1024px) {
+  .gigs__month .grid__item {
+    width: 25%; } }
+
+.gigs__gig {
+  background-color: #6f717c;
+  padding: 12px;
+  margin-bottom: 12px; }
+
+.gigs__venue {
+  margin: 0; }
+
+.gigs__town {
+  margin: 0; }
+
+.gigs__date {
+  font-size: 50px;
+  line-height: .8;
+  color: #263791; }
+
 .contact p {
   display: inline-block; }
 .contact h3 {
