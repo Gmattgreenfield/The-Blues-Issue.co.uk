@@ -2702,6 +2702,11 @@ label,
       .band__photo img {
         margin-top: 48px; } }
 
+.contact p {
+  display: inline-block; }
+.contact h3 {
+  display: inline-block; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -2740,7 +2745,11 @@ a {
     color: #7585db; }
 
 h1, h2, h3 {
-  font-family: "Old Press", Impact, sans-serif; }
+  font-family: "Old Press", Impact, sans-serif;
+  color: #b90039; }
+
+h1 {
+  font-size: 54px; }
 
 .logo {
   display: none;

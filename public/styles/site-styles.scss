@@ -24,6 +24,7 @@ $blue: #263791;
 // Import Pages
 @import "pages/index";
 @import "pages/the-band";
+@import "pages/contact";
 
 * {
 	margin: 0;
@@ -72,8 +73,12 @@ a {
 
 h1, h2, h3 {
 	font-family: $old-press;
+	color: $red;
 }
 
+h1 {
+	font-size: 54px;
+}
 
 // LOGO
 
