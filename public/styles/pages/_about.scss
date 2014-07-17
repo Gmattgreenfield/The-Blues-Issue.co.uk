@@ -1,0 +1,10 @@
+// ABOUT
+
+.about__image {
+  @include media-query(lap-and-up) {
+    float: right;
+    margin: $base-spacing-unit;
+    margin-top: 0;
+    max-width: 50%;
+  }
+}
