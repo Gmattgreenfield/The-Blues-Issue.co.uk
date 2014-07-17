@@ -5,10 +5,43 @@
 		<h1>Contact</h1>
 		<p>Contact the band for info on up and coming gigs, details on the set lists, where Steve gets his hats from or just about anything really.....</p>
 
-		<div class="contact">
+<div class="grid">
+
+	<div class="grid__item contact__grid">
+
+		<form class="contact__form" action="" method="">
+			<ul class="form-fields">
+				<li>
+					<label for="name">Your Name</label>
+					<input type="text" class="text-input" name="name" id="name" value=""  placeholder="Blues Issue Fan">
+				</li>
+
+				<li>
+					<label for="email">Your Email Address</label>
+					<input type="email" class="text-input"  name="email" id="email" value="" placeholder="email@example.com">
+				</li>
+
+				<li>
+					<label for="message">Your Message</label>
+					<textarea type="text" class="text-input contact__form__message" name="message" id="message" value="" placeholder="Ask us about an upcomming gig, check our availabilty or just say hi"></textarea>
+				</li>
+
+				<li>
+					<input type="submit" class="btn" name="submit" value="Send Message">
+				</li>
+			</ul>
+		</form>
+
+	</div><!--
+
+--><div class="grid__item contact__grid">
+		<div class="contact__manual">
 			<h3>Phone Steve:</h3> <p> 07796110679</p>
 			<br>
 			<h3>Email Us:</h3> <p> thebluesissue@gmail.com</p>
 		</div>
+	</div>
+
+</div>
 
 {% endblock %}

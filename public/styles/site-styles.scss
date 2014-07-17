@@ -20,6 +20,7 @@ $use-nav:true;
 $old-press: 'Old Press', Impact, sans-serif;
 $red: #b90039;
 $blue: #263791;
+$quarter-spacing-unit: $base-spacing-unit/4;
 
 // Import Pages
 @import "pages/index";
@@ -62,6 +63,14 @@ body {
 	@extend %panel;
 }
 
+.btn {
+	background-color: $blue;
+	padding: $half-spacing-unit;
+	border: none;
+	&:hover {
+		background-color: lighten($blue,20%);
+	}
+}
 
 // TEXT
 
