@@ -941,7 +941,7 @@ hgroup .hN {
  * Inline quotes.
  */
 q {
-  quotes: "\2018" "\2019" "\201C" "\201D"; }
+  quotes: "\2018" "\2019" "\201C " "\201D "; }
   q:before {
     content: "\2018";
     content: open-quote; }
@@ -956,15 +956,15 @@ q {
     content: close-quote; }
 
 blockquote {
-  quotes: "\201C" "\201D"; }
+  quotes: "\201C " "\201D "; }
   blockquote p:before {
-    content: "\201C";
+    content: "\201C ";
     content: open-quote; }
   blockquote p:after {
     content: "";
     content: no-close-quote; }
   blockquote p:last-of-type:after {
-    content: "\201D";
+    content: "\201D ";
     content: close-quote; }
   blockquote q:before {
     content: "\2018";
@@ -2659,42 +2659,24 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
-.page-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 12px; }
-  @media only screen and (min-width: 481px) {
-    .page-container {
-      padding: 24px; } }
-
-.nav--main {
-  background-color: red;
-  color: white; }
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden; }
-  .video-container iframe,
-  .video-container object,
-  .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
   background-color: black;
   background: url("/assets/imgs/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding: 0px 24px; }
 
-.content,
-footer {
+.page-container {
+  max-width: 1200px;
+  min-width: 250px;
+  margin: auto; }
+
+.content, .footer {
   padding: 20px;
   margin-top: 30px;
   background-color: white;
@@ -2707,6 +2689,61 @@ footer {
 
 .content {
   min-height: 400px; }
+
+a {
+  color: #263791;
+  text-decoration: none; }
+  a:hover {
+    color: #7585db; }
+
+h1, h2, h3 {
+  font-family: "Old Press", Impact, sans-serif; }
+
+.logo {
+  display: none;
+  width: 190px;
+  margin-top: 25px;
+  margin-left: 25px; }
+  @media only screen and (min-width: 481px) {
+    .logo {
+      display: block; } }
+
+@media only screen and (min-width: 481px) {
+  .top-nav {
+    float: right;
+    max-width: 510px;
+    height: 50px; } }
+.top-nav ul {
+  margin: 0;
+  list-style-type: none; }
+.top-nav li {
+  text-align: center;
+  font-family: "Old Press", Impact, sans-serif;
+  font-size: 2em;
+  margin-left: -24px;
+  margin-right: -24px; }
+  @media only screen and (min-width: 481px) {
+    .top-nav li {
+      display: inline;
+      padding: 30px 10px 10px;
+      margin: 0; } }
+.top-nav .current {
+  background-color: #b90039; }
+.top-nav .index-link a {
+  color: white;
+  font-size: 1.2em; }
+@media only screen and (min-width: 481px) {
+  .top-nav .index-link {
+    display: none; } }
+
+.footer__social {
+  list-style: none;
+  float: right; }
+  .footer__social li {
+    display: inline-block; }
+
+.footer__nav li {
+  margin: 0px 5px; }
 
 .index-logo {
   display: block;
@@ -2721,73 +2758,3 @@ footer {
   width: 100%;
   text-align: center;
   bottom: 80px; }
-
-.footer__social {
-  list-style: none;
-  float: right; }
-  .footer__social li {
-    display: inline-block; }
-
-.footer__nav li {
-  margin: 0px 5px; }
-
-/*TEXT*/
-a {
-  color: #263791;
-  text-decoration: none; }
-  a:hover {
-    color: #7585db; }
-
-h1, h2, h3 {
-  font-family: "Old Press", Impact, sans-serif; }
-
-.centered {
-  text-align: center; }
-
-.blue {
-  color: #263791; }
-
-.red {
-  color: #b90039; }
-
-.logo img {
-  width: 190px; }
-
-.top-nav {
-  float: right;
-  max-width: 510px;
-  height: 50px; }
-  .top-nav li {
-    text-align: center;
-    font-family: "Old Press", Impact, sans-serif;
-    font-size: 2em;
-    padding: 0px 10px; }
-  .top-nav .current {
-    background-color: #b90039; }
-  .top-nav .index-link {
-    display: none; }
-
-@media (max-width: 800px) {
-  .top-nav {
-    float: none;
-    margin: auto;
-    height: auto; }
-
-  .logo {
-    margin-top: 50px; } }
-@media screen and (max-width: 600px) {
-  .index-link {
-    display: block !important; }
-    .index-link a {
-      color: white;
-      font-size: 1.2em; }
-
-  .top-nav {
-    position: relative; }
-    .top-nav ul {
-      width: 100%; }
-    .top-nav li {
-      display: block; }
-
-  .logo {
-    display: none; } }

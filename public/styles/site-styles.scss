@@ -11,23 +11,10 @@
 // ============== //
 $use-beautons: false;
 $use-grids: true;
+$use-nav:true;
+
 // Import Inuit
-@import "../../../../inuit/inuit.css/inuit";
-
-// =================== //
-// My Default Settings //
-// =================== //
-//These are required for the _my-mixins in inuit folder. not used on this site, should be removed or re-thought.
-$primary-color: red;
-$secondary-color: blue;
-
-// Import my custom inuit settings, mixins and classes
-@import "../../../../inuit/my-mixins";
-
-
-
-
-
+@import "inuit.css/inuit";
 
 
 // ================== //
@@ -40,7 +27,10 @@ $red: #b90039;
 $blue: #263791;
 
 
-
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	background-color: black;
@@ -48,38 +38,109 @@ body {
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment:fixed;
+	padding: 0px $base-spacing-unit;
  }
 
+.page-container {
+	max-width: 1200px;
+	min-width: 250px;
+	margin: auto;
+}
 
-.content,
-footer {
+// Grey opaque box for content
+%panel {
 	padding: 20px;
 	margin-top: 30px;
  	background-color: white;
- 	background-color: rgba(255, 255, 255, 0.9); 
+ 	background-color: rgba(255, 255, 255, 0.9);
  	@include vendor(border-radius, 4px);
 }
 
 .content {
  	min-height: 400px;
+	@extend %panel;
 }
 
- .index-logo {
- 	display: block;
- 	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	margin-top: -180px;
- 	margin-left: -145px;
+
+// TEXT
+
+a {
+	color: $blue;
+	text-decoration: none;
+	&:hover {
+		color: lighten($blue, 30%);
+	}
+}
+
+h1, h2, h3 {
+	font-family: $old-press;
+}
+
+
+// LOGO
+
+// Only shows on lap and up, replaced by additional nav item on palm view.
+.logo {
+		display: none;
+		width: 190px;
+		margin-top: 25px;
+		margin-left: 25px;
+		@include media-query(lap-and-up) {
+			display: block;
+		}
+
+}
+
+
+
+// Navigation - Top
+
+.top-nav {
+		@include media-query(lap-and-up) {
+			float: right;
+			max-width: 510px;
+			height: 50px;
+		}
+		ul {
+			margin: 0;
+			list-style-type: none;
+		}
+		li {
+			text-align: center;
+			font-family: $old-press;
+			font-size: 2em;
+
+			// negative margin to overcome the body padding
+			margin-left: -$base-spacing-unit;
+			margin-right: -$base-spacing-unit;
+
+			@include media-query(lap-and-up) {
+				display: inline;
+				padding: 30px 10px 10px;
+				margin: 0;
+			}
+		}
+
+	.current {
+		background-color: $red;
+	}
+
+	.index-link {
+		a {
+			color: white;
+			font-size: 1.2em;
+		}
+		@include media-query(lap-and-up) {
+			display: none;
+		}
+	}
+
  }
 
- .enter-site {
- 	position: absolute;
- 	width: 100%;
-	text-align: center;
- 	bottom: 80px;
- }
-
+// Footer
+.footer {
+	@extend %panel;
+}
 .footer__social {
 	list-style: none;
 	float: right;
@@ -96,86 +157,20 @@ footer {
 
 
 
-/*TEXT*/
 
-a {
-	color: $blue;
-	text-decoration: none;
-	&:hover {
-		color: lighten($blue, 30%);
-	}
-}
-
-h1, h2, h3 {
-	font-family: $old-press;
-}
-
-.centered {
-	text-align: center;
-}
-
-.blue {	color: $blue;  }
-.red { color: $red; }
-
-
-
-
-
-.logo {
-	img {
-		width: 190px;
-	}
-}
-
-
- .top-nav {
- 	float: right;
- 	max-width: 510px;
- 	height: 50px;
- 	li {
-	 	text-align: center;
-	 	font-family: $old-press;
-	 	font-size: 2em;
- 		padding: 0px 10px;
- 	}
- 	.current {
- 		background-color: $red;
- 	}
- 	.index-link {
-		display: none;
-	}
+// Index Page
+ .index-logo {
+ 	display: block;
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	margin-top: -180px;
+ 	margin-left: -145px;
  }
 
-@media (max-width: 800px){
-   .top-nav {
-	 	float: none;
-	 	margin: auto;
-	 	height: auto;
-	}
-	.logo {
-		margin-top: 50px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.index-link {
-		display: block!important;
-		a {
-			color: white;
-			font-size: 1.2em;
-		}
-	}
-	.top-nav {
-		position: relative;
-		ul {
-			width: 100%;
-		}
-		li {
-			display: block;
-		}
-	}
-
-	.logo {
-		display: none;
-	}
-}
+ .enter-site {
+ 	position: absolute;
+ 	width: 100%;
+	text-align: center;
+ 	bottom: 80px;
+ }
