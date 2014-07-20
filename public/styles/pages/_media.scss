@@ -1,0 +1,10 @@
+// Media Page
+
+.album-art {
+  .grid__item {
+      width: 50%;
+    @include media-query(lap-and-up) {
+      width: 25%;
+    }
+  }
+}
