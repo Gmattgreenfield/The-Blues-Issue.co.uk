@@ -6,17 +6,45 @@
        	 url('/assets/fonts/old-press.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
-// ============== //
-// Inuit Settings //
-// ============== //
-$use-beautons: false;
-$use-grids: true;
-$use-nav:true;
+// ============= //
+// Inuit Imports //
+// ============= //
 
-// Import Inuit
-@import "inuit.css/inuit";
+/* Settings: Global variables, site-wide settings, config switches, etc. */
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-responsive-settings/settings.responsive";
 
-//Variables
+/* Tools: Site-wide mixins and functions. */
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+
+/* Generic: Low-specificity, far-reaching rulesets (e.g. resets). */
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+
+/* Base: Unclassed HTML elements (e.g. a {}, blockquote {}, address {}). */
+@import "bower_components/inuit-images/base.images";
+
+/* Objects: Objects, abstractions, and design patterns (e.g. .media {}). */
+@import "bower_components/inuit-inline-list/objects.inline-list";
+@import "bower_components/inuit-layout/objects.layout";
+
+/* Components: Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn’t get involved with. */
+
+/* Trumps: High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}). */
+
+
+
+/* Make Inuit work like it used to  */
+.grid { @extend %layout; }
+.grid__item { @extend %layout__item; }
+$base-spacing-unit: $inuit-base-spacing-unit;
+$half-spacing-unit: $inuit-base-spacing-unit--small;
+
+
+
+// Blues Issue Variables
 $old-press: 'Old Press', Impact, sans-serif;
 $red: #b90039;
 $blue: #263791;
@@ -28,10 +56,6 @@ $blue: #263791;
 @import "pages/gigs";
 @import "pages/contact";
 
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	background-color: black;
@@ -54,7 +78,7 @@ body {
 	margin-top: 30px;
  	background-color: white;
  	background-color: rgba(255, 255, 255, 0.9);
- 	@include vendor(border-radius, 4px);
+ 	border-radius: 4px;
 }
 
 .content {
@@ -103,11 +127,11 @@ h1 {
 .top-nav {
 		@include media-query(lap-and-up) {
 			float: right;
-			max-width: 510px;
 			height: 50px;
 		}
 		ul {
 			margin: 0;
+			padding: 0;
 			list-style-type: none;
 		}
 		li {
@@ -155,7 +179,8 @@ h1 {
 }
 
 .footer__nav {
-	li {
-		margin: 0px 5px;
-	}
+		@extend %inline-list;
+		li {
+			padding: 0 5px;
+		}
 }
