@@ -1,0 +1,21 @@
+{% include header.liquid %}
+ 	<body>
+    <div class="page-container">
+
+  			{% include navigation.liquid %}
+
+  			<div class="logo">
+          <a href="/">
+            <img src="/assets/imgs/logo.png" alt="The Blues Issue"/>
+          </a>
+        </div>
+
+        <div class="content">
+	        {{page.content}}
+        </div>
+
+  			{% include footer.liquid %}
+
+    </div>
+  </body>
+</html>
