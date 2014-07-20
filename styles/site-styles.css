@@ -1,6 +1,6 @@
 @font-face {
   font-family: Old Press;
-  src: url('/assets/fonts/old-press.woff') format('woff'), url('/assets/fonts/old-press.ttf') format('truetype');
+  src: url('../fonts/old-press.woff') format('woff'), url('../fonts/old-press.ttf') format('truetype');
   /* Safari, Android, iOS */ }
 
 /* Settings: Global variables, site-wide settings, config switches, etc. */
@@ -492,7 +492,7 @@ img[width], img[height] {
 
 body {
   background-color: black;
-  background: url("/assets/imgs/background.jpg");
+  background: url("../imgs/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

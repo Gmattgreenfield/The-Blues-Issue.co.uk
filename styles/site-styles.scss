@@ -2,8 +2,8 @@
 
 @font-face {
 	font-family: Old Press;
-  	src: url('/assets/fonts/old-press.woff') format('woff'), /* Modern Browsers */
-       	 url('/assets/fonts/old-press.ttf')  format('truetype'), /* Safari, Android, iOS */
+  	src: url('../fonts/old-press.woff') format('woff'), /* Modern Browsers */
+       	 url('../fonts/old-press.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 // ============= //
@@ -60,7 +60,7 @@ $blue: #263791;
 
 body {
 	background-color: black;
- 	background: url("/assets/imgs/background.jpg");
+ 	background: url("../imgs/background.jpg");
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment:fixed;
