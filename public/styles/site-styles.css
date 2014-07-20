@@ -518,6 +518,12 @@ img[height] {
       .band__photo img {
         margin-top: 48px; } }
 
+.album-art .grid__item {
+  width: 50%; }
+  @media screen and (min-width: 720px) {
+    .album-art .grid__item {
+      width: 25%; } }
+
 .contact p {
   display: inline-block; }
 .contact h3 {
