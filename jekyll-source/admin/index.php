@@ -24,17 +24,19 @@
               <th>Town</th>
           </tr>
           <?php
-            $rowid = $row[id];
-            $delete = 'DELETE FROM `gigs` WHERE `id` = $rowid';
 
-            while($row = $rs->fetch_assoc()){
+            while($row = $rs->fetch_assoc()) {
+            $rowid = $row['id'];
+            $date =   $row['date'];
+            $venue =  $row['venue'];
+            $town =    $row['town'];
               echo '<tr>';
                 echo '<td>' . $row['date'] . '</td>';
                 echo '<td>' . $row['venue'] . '</td>';
                 echo '<td>' . $row['town'] . '</td>';
                 echo '<td>
-                        <form action="' . $delete . '" method="post">
-                          <input type="hidden" id="id" name="id" value="' . $row[id] . '" />
+                        <form action=" " method="post">
+                          <input type="hidden" id="id" name="id" value="' . $rowid . '" />
                           <input type="submit" name="formDelete" id="formDelete" value="Delete" />
                         </form>
                       </td>';
