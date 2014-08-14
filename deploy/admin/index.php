@@ -26,14 +26,15 @@
           <?php
 
             while($row = $rs->fetch_assoc()) {
-            $rowid = $row['id'];
-            $date =   $row['date'];
-            $venue =  $row['venue'];
-            $town =    $row['town'];
+              $rowid =  $row['id'];
+              $date  =  $row['date'];
+              $venue =  $row['venue'];
+              $town  =  $row['town'];
+
               echo '<tr>';
-                echo '<td>' . $row['date'] . '</td>';
-                echo '<td>' . $row['venue'] . '</td>';
-                echo '<td>' . $row['town'] . '</td>';
+                echo '<td>' . $date . '</td>';
+                echo '<td>' . $venue . '</td>';
+                echo '<td>' . $town . '</td>';
                 echo '<td>
                         <form action=" " method="post">
                           <input type="hidden" id="id" name="id" value="' . $rowid . '" />
@@ -42,6 +43,7 @@
                       </td>';
               echo '</tr>';
             };
+            
            ?>
       </table>
 

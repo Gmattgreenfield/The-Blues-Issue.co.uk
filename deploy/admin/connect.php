@@ -15,9 +15,7 @@
 
     // Assign the desired selection to a variable. Here we are selecting all entries
     // $selection = "SELECT * FROM `gigs` WHERE town='Worthing' ";
-    // $selection = "SELECT * FROM `gigs` WHERE date > CURDATE() ";
     $selection = "SELECT * FROM `gigs` WHERE date >= CURDATE() ORDER BY date ASC";
-    // CURDATE()
 
     // $rs is querying the connection ($con) for the selected rows ($selection)
     $rs=$conn->query($selection);
